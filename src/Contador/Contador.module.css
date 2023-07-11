@@ -1,0 +1,10 @@
+.contadorDiv {
+    border-radius: 7px;
+    background-color: antiquewhite;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 10%);
+    padding: 5px 10px;
+    height: 30px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}

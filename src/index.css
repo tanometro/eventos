@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
+  font-family: "Fira Sans";
+  min-height: 100vh;
+  background-color: #a9c9ff;
+  background: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
 }
 
 code {

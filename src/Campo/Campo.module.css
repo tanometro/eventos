@@ -1,0 +1,26 @@
+.inputDiv {
+    margin: 24px 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .input {
+    width: calc(50% - 10px);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 9px;
+    border: none;
+    height: 50px;
+    outline-color: #6278F7;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+
+@media (max-width: 768px) {
+    .input {
+      width: 100%; /* Ancho para 1 campo en dispositivos móviles */
+    }
+  }
