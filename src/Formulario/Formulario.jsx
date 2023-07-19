@@ -4,18 +4,19 @@ import { useState } from "react";
 import styles from "./Formulario.module.css";
 
 export default function Registro (props) {
+    const {registrarAsistente} = props;
+  
     const [nombres, setNombres] = useState();
-    const [apellido, setApellido] = useState();
+    const [apellidos, setApellido] = useState();
     const [dni, setDni] = useState();
     const [email, setEmail] = useState();
     const [dias, setDias] = useState();
-
-    const {registrarAsistente} = props;
 
     const manejarEnvio = (e) => {
         e.preventDefault();
         let datosEnviar = {
             nombres,
+            apellidos,
             dni,
             email,
             dias
@@ -36,7 +37,7 @@ export default function Registro (props) {
             <Campo
             placeholder="Apellido/s" 
             required
-            valor={apellido} 
+            valor={apellidos} 
             setValor={setApellido}
             />
             <Campo
@@ -54,9 +55,9 @@ export default function Registro (props) {
             valor={dias}
             setValor={setDias}>
               <option value="">Seleccionar</option>
-              <option value="opcion1">Opción 1</option>
-              <option value="opcion2">Opción 2</option>
-              <option value="opcion3">Opción 3</option>
+              <option value="opcion1">1 Día</option>
+              <option value="opcion2">2 Día</option>
+              <option value="opcion3">3 Días</option>
             </select> 
             <Boton>
                 Agregar asistente

@@ -6,7 +6,7 @@ import Contador from "../Contador/Contador";
 export default function Navbar () {
     return (
         <div className={styles.navDiv} >
-            <NavLink to="/">
+            <NavLink to="/home">
                 <span>Inicio</span>
             </NavLink>
             <NavLink to="/lista">

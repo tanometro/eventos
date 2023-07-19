@@ -1,28 +1,13 @@
-function validarNombre(nombre) {
-    if(nombre.length < 3) {
-        return {
-            name: {
-                error: false, 
-                message: "NADIE TIENE UN NOMBRE MENOR A 3 LETRAS BOLU",
-            },
-        }
-    }else {
-        return {
-        name: {
-            error: true, 
-            message: "MÍINIMO 3 LETRAS PAPA FRITA"
-        },
-    }
-   }
-} 
+export default function validations (inputs) {
+    const regexEmail = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    const regexPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,10}$/
 
-function validarDni(dni) {
-    if(dni.length < 7 || dni.length > 9) {
-        return {
-            dni: {
-                error: false, 
-                message: "EL DNI SON 7 NUMEROS Y NO MAS DE 9",
-            },
-        }
-    }
-} 
+    let errors = {};
+
+    (!inputs.email) ? errors.email = "Debe haber un email papa frita" : errors.email = "";
+    (inputs.email.length > 35) ? errors.email = "Menos de 35 caracteres pf" : errors.email = "";
+    (!regexEmail.test(inputs.email)) ? errors.email = "Email no válido pf" : errors.email = "";
+    (!regexPassword.test(inputs.password)) ? errors.password = "Contraseña inválida pf" : errors.password = "";
+    
+    return {errors};
+}

@@ -1,28 +1,20 @@
-.list {
-    margin: 80px 0;
-    gap: 20px;
-    justify-content: center;
-}
-
-.label {
-    background-color: #f7f7f7;
-    border-radius: 18px;
-    box-shadow: 7px 7px 15px rgba(0, 0, 0, 10%);
-}
-
-.asistentes-list {
+.asistentesList {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    border: 1px solid #ccc;
+    border-radius: 20px;
     padding: 10px;
+    box-shadow: 7px 7px 15px rgba(0, 0, 0, 10%);
+    background-color: #f7f7f7;
+    margin-top: 30px;
   }
   
-  .asistentes-list-header {
+  .asistentesListHeader {
     display: flex;
     align-items: center;
     background-color: #f0f0f0;
     font-weight: bold;
+    border-radius: 15px;
   }
   
   .column {
